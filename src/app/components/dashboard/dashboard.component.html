@@ -1,1 +1,16 @@
-<h1>Dashboard works!</h1>
+<div class="mdl-grid">
+<!-- <h5>Stocks dashboard: </h5> -->
+    <div class="mdl-cell mdl-cell--12-col" *ngIf="!stocks" style="text-align:center;">Loading</div>
+    <div class="mdl-cell mdl-cell--3-col" *ngFor="let stock of stocks">
+       <summary [stock]="stock"></summary>
+    </div>
+    <!-- <div>
+        <ul>
+            <li>AAPL: Apple</li>
+            <li>GOOG: Google</li>
+            <li>FB: Facebook</li>
+            <li>AMZN: Amazon</li>
+            <li>TWTR: Twitter</li>
+        </ul>    
+    </div> -->
+</div>
