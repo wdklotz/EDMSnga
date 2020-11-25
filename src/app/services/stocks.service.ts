@@ -1,18 +1,7 @@
-// import { Injectable } from '@angular/core';
-
-// @Injectable({
-//   providedIn: 'root'
-// })
-// export class StocksService {
-
-//   constructor() { }
-// }
-
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 let stocks: Array<string> = ['AAPL', 'GOOG', 'FB', 'AMZN', 'TWTR'];
-// let service: string = 'https://angular2-in-action-api.herokuapp.com';
 let service: string = 'http://127.0.0.1:3000/api/lib';
 
 export interface DocInterface {     //??learn
