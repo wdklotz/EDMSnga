@@ -1,19 +1,3 @@
-// import { Component, OnInit } from '@angular/core';
-
-// @Component({
-//   selector: 'manage',
-//   templateUrl: './manage.component.html',
-//   styleUrls: ['./manage.component.css']
-// })
-// export class ManageComponent implements OnInit {
-
-//   constructor() { }
-
-//   ngOnInit(): void {
-//   }
-
-// }
-
 import { Component }     from '@angular/core';
 import { StocksService } from '../../services/stocks.service';
 
