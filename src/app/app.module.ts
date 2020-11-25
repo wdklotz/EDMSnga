@@ -10,14 +10,14 @@ import { SummaryComponent }   from './components/summary/summary.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 import { StocksService }      from './services/stocks.service';
-import { ManageComponent }    from './components/manage/manage.component';
+import { EditComponent }      from './components/edit/edit.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SummaryComponent,
     DashboardComponent,
-    ManageComponent,
+    EditComponent,
   ],
   imports: [
     BrowserModule,

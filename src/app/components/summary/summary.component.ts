@@ -6,12 +6,14 @@ import { Component, Input } from '@angular/core';   // dependencies
   styleUrls: ['./summary.component.css']
 })
 export class SummaryComponent {                      // component controller
-  @Input() stock: any;                               // component property
+  @Input() document: any;                               // component property
 
   isNegative() {
-    return (this.stock && this.stock.change < 0);
+    // return (this.stock && this.stock.change < 0);
+    return true;
     }
     isPositive() {
-    return (this.stock && this.stock.change > 0);
+    // return (this.stock && this.stock.change > 0);
+    return true;
     }
 }
