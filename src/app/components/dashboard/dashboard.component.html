@@ -1,16 +1,8 @@
-<div class="mdl-grid">
+<!-- <div class="mdl-grid"> -->
 <!-- <h5>Stocks dashboard: </h5> -->
     <!-- <div class="mdl-cell mdl-cell--12-col" *ngIf="!stocks" style="text-align:center;">Loading</div> -->
-    <div class="mdl-cell mdl-cell--6-col" *ngFor="let doc of docs">
+    <!-- <div class="mdl-cell mdl-cell--6-col" *ngFor="let doc of docs">
        <summary [document]="doc"></summary>
-    </div>
-    <!-- <div>
-        <ul>
-            <li>AAPL: Apple</li>
-            <li>GOOG: Google</li>
-            <li>FB: Facebook</li>
-            <li>AMZN: Amazon</li>
-            <li>TWTR: Twitter</li>
-        </ul>    
     </div> -->
-</div>
+<!-- </div> -->
+<simpletable [docs]="docs"></simpletable>

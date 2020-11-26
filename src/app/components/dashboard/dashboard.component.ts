@@ -1,15 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit }           from '@angular/core';
 import { StocksService, DocInterface } from '../../services/stocks.service';
 
 @Component({
-  selector: 'dashboard',
+  selector:    'dashboard',
   templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.css']
+  styleUrls:  ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
   docs: Array<DocInterface>;      // props
-  // stocks: Array<string>;
-  // symbols: Array<string>;
 
   constructor(private service: StocksService) {
     // this.symbols = service.get();

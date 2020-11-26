@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SummaryComponent } from './summary.component';
+import { SimpletableComponent } from './simpletable.component';
 
-describe('SummaryComponent', () => {
-  let component: SummaryComponent;
-  let fixture: ComponentFixture<SummaryComponent>;
+describe('SimpletableComponent', () => {
+  let component: SimpletableComponent;
+  let fixture: ComponentFixture<SimpletableComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SummaryComponent ]
+      declarations: [ SimpletableComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SummaryComponent);
+    fixture = TestBed.createComponent(SimpletableComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
