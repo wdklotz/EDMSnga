@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { DocInterface }             from '../../services/stocks.service';
+import { DocInterface }             from '../../services/doc.service';
 
 
 @Component({

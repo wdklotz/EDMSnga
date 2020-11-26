@@ -1,5 +1,5 @@
 import { Component, OnInit }           from '@angular/core';
-import { StocksService, DocInterface } from '../../services/stocks.service';
+import { DocService, DocInterface }    from '../../services/doc.service';
 
 @Component({
   selector:    'dashboard',
@@ -9,7 +9,7 @@ import { StocksService, DocInterface } from '../../services/stocks.service';
 export class DashboardComponent implements OnInit {
   docs: Array<DocInterface>;      // props
 
-  constructor(private service: StocksService) {
+  constructor(private service: DocService) {
     // this.symbols = service.get();
     }
 

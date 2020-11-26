@@ -1,6 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { SimpletableComponent } from './simpletable.component';
+import { SimpletableComponent }      from './simpletable.component';
 
 describe('SimpletableComponent', () => {
   let component: SimpletableComponent;

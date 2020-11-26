@@ -6,17 +6,15 @@ import { AppRoutingModule }   from './app-routing.module';
 import { FormsModule }        from '@angular/forms';
 
 import { AppComponent }         from './app.component';
-// import { SummaryComponent }     from './components/summary/summary.component';
 import { DashboardComponent }   from './components/dashboard/dashboard.component';
 import { SimpletableComponent } from './components/simpletable/simpletable.component';
 
-import { StocksService }        from './services/stocks.service';
+import { DocService }           from './services/doc.service';
 import { EditComponent }        from './components/edit/edit.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    // SummaryComponent,
     DashboardComponent,
     EditComponent,
     SimpletableComponent,
@@ -27,7 +25,7 @@ import { EditComponent }        from './components/edit/edit.component';
     AppRoutingModule,
     FormsModule,
   ],
-  providers: [StocksService],
+  providers: [DocService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

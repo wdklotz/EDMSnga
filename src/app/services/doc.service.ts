@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 // let stocks: Array<string> = ['AAPL', 'GOOG', 'FB', 'AMZN', 'TWTR'];
-let service: string = 'http://127.0.0.1:3000/api/lib';
+let service: string = 'http://127.0.0.1:3000/api/lib';   // local express REST server (SQlite3)
 
 export interface DocInterface {     //??learn TypeScript!!
   id?       : number;
@@ -19,7 +19,7 @@ export interface DocInterface {     //??learn TypeScript!!
 }
 
 @Injectable()
-export class StocksService {
+export class DocService {
   constructor(private http: HttpClient) {}   // learn HttpClient !!
 
   get() {
