@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-let stocks: Array<string> = ['AAPL', 'GOOG', 'FB', 'AMZN', 'TWTR'];
+// let stocks: Array<string> = ['AAPL', 'GOOG', 'FB', 'AMZN', 'TWTR'];
 let service: string = 'http://127.0.0.1:3000/api/lib';
 
 export interface DocInterface {     //??learn TypeScript!!
@@ -20,7 +20,7 @@ export interface DocInterface {     //??learn TypeScript!!
 
 @Injectable()
 export class StocksService {
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) {}   // learn HttpClient !!
 
   get() {
     return this.http.get<Array<DocInterface>>(service);  // returns observable
