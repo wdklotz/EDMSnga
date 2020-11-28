@@ -2,15 +2,15 @@ import { NgModule }           from '@angular/core';
 
 import { BrowserModule }      from '@angular/platform-browser';
 import { HttpClientModule }   from '@angular/common/http';
-import { AppRoutingModule }   from './app-routing.module';
 import { FormsModule }        from '@angular/forms';
 
-import { AppComponent }         from './app.component';
-import { DashboardComponent }   from './components/dashboard/dashboard.component';
-import { SimpletableComponent } from './components/simpletable/simpletable.component';
-
-import { DocService }           from './services/doc.service';
-import { EditComponent }        from './components/edit/edit.component';
+import { AppRoutingModule }       from './app-routing.module';
+import { AppComponent }           from './app.component';
+import { DocService }             from './services/doc.service';
+import { DashboardComponent }     from './components/dashboard/dashboard.component';
+import { SimpletableComponent }   from './components/simpletable/simpletable.component';
+import { EditComponent }          from './components/edit/edit.component';
+import { CompleteTableComponent } from './components/complete-table/complete-table.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +18,7 @@ import { EditComponent }        from './components/edit/edit.component';
     DashboardComponent,
     EditComponent,
     SimpletableComponent,
+    CompleteTableComponent,
   ],
   imports: [
     BrowserModule,

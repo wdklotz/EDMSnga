@@ -6,15 +6,15 @@ import { DocService, DocInterface }    from '../../services/doc.service';
   templateUrl: './dashboard.component.html',
   styleUrls:  ['./dashboard.component.css']
 })
-export class DashboardComponent implements OnInit {
+export class DashboardComponent implements OnInit {   // controller
   docs: Array<DocInterface>;      // props
+  private service: DocService;
 
-  constructor(private service: DocService) {
-    // this.symbols = service.get();
+  constructor( service: DocService) {
+    this.service = service;
     }
 
   ngOnInit() {
-    // this.service.load(this.symbols).subscribe(stocks => this.stocks = stocks);  // observable
     this.service.get().subscribe(doc => this.docs = doc);  // observable
   }
 }
