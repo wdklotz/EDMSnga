@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { DocInterface }    from '../../models/docinterface.model';
+import { DocInterface } from '../../models/docinterface.model';
 
 @Component({
     selector: 'json-display',
