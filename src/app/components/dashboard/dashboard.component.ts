@@ -1,24 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient }        from '@angular/common/http';
-// import { Server } from 'http';
-// import { DocInterface }    from '../../services/doc.service';
+import { HttpClient } from '@angular/common/http';
+import { DocInterface } from '../../models/docinterface.model';
 
 let service: string = 'http://127.0.0.1:3000/api/lib';   // local express REST server (SQlite3)
-
-export interface DocInterface {
-  id       : number;
-  Favorite : string;
-  Document : string;
-  author   : number;
-  type     : number;
-  shelf    : number;
-  Keywords : string;
-  Trash    : string;
-  Author   : string;
-  Type     : string;
-  Shelf    : string;
-  select?  : boolean;
-}
 
 @Component({
   selector:    'dashboard',
