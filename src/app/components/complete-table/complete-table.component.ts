@@ -1,5 +1,5 @@
 import {Component, Input, OnInit, QueryList, ViewChildren} from '@angular/core';
-import { DocInterface }                                    from '../../services/doc.service';
+import { DocInterface } from '../../services/doc.service';
 // import {NgbdSortableHeader, SortEvent}                     from '../../directives/sortable.directive';
 
 @Component({

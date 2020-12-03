@@ -1,42 +1,43 @@
-import { Injectable } from '@angular/core';
+import { OnInit, Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-// let stocks: Array<string> = ['AAPL', 'GOOG', 'FB', 'AMZN', 'TWTR'];
 let service: string = 'http://127.0.0.1:3000/api/lib';   // local express REST server (SQlite3)
 
-export interface DocInterface {     //??learn TypeScript!!
-  id?       : number;
-  Favorite? : string;
-  Document? : string;
-  author?   : number;
-  type?     : number;
-  shelf?    : number;
-  Keywords? : string;
-  Trash?    : string;
-  Author?   : string;
-  Type?     : string;
-  Shelf?    : string;
+// Interfaces? https://www.typescriptlang.org/docs/handbook/interfaces.html
+export interface DocInterface {
+  id       : number;
+  Favorite : string;
+  Document : string;
+  author   : number;
+  type     : number;
+  shelf    : number;
+  Keywords : string;
+  Trash    : string;
+  Author   : string;
+  Type     : string;
+  Shelf    : string;
+  select?  : boolean;
 }
 
 @Injectable()
-export class DocService {
+export class DocService implements OnInit {
+  data: Array<DocInterface>;
+  loading: boolean;
+  collectionSize: number;
+  text:string;
+
   constructor(private http: HttpClient) {}   // learn HttpClient !!
 
-  get() {
-    return this.http.get<Array<DocInterface>>(service);  // returns observable
+  ngOnInit() {
+    // this.load();
   }
-  // add(stock) {
-  //   stocks.push(stock);
-  //   return this.get();
-  // }
-  // remove(stock) {
-  //   stocks.splice(stocks.indexOf(stock), 1);
-  //   return this.get();
-  // }
-  // load(symbols) {
-  //   if (symbols) {
-  //     // returns observable
-  //     return this.http.get<Array<StockInterface>>(service + '/stocks/snapshot?symbols=' + symbols.join());
-  //   }
+
+  // load(): Array<DocInterface> {
+  //   this.http.get<Array<DocInterface>>(service).subscribe(data=> {  // observable
+  //     this.text = "xxxxxxxxxxxxxxxxxxxxxx";
+  //     return data;
+  //     // this.collectionSize = data.length;
+  //     // this.loading = false;
+  //   });
   // }
 }
