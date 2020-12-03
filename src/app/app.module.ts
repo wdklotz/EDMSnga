@@ -9,6 +9,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { AsJsonDisplayComponent } from './components/asjson-display/asjson-display.component'
+import { DocService } from './services/doc.service';
 // import { DocService }             from './services/doc.service';
 // import { SimpletableComponent }   from './components/simpletable/simpletable.component';
 // import { EditComponent }          from './components/edit/edit.component';
@@ -40,7 +41,7 @@ import { AsJsonDisplayComponent } from './components/asjson-display/asjson-displ
   // DI: Providers are responsible for creating the instanceof the object requested
   // Anything that has been registered with an NgModule’s providers array 
   // is available to be injected in your application code
-  // providers: [DocService],
+  providers: [DocService],
   // list of components that are bootstrapped when this module is bootstrapped
   bootstrap: [AppComponent]
 })
