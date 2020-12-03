@@ -4,13 +4,13 @@ import {DocInterface } from '../dashboard/dashboard.component'
 @Component({
     selector: 'json-display',
     template:
-     `  <p>{{ collectionSize }}</p>
+     `  <p>CollectionSize: {{ docs.length }}</p>
         <pre>{{ asJSON('1') }}</pre>
         <pre>{{docs | json}}</pre>  `
 })
 
 export class AsJsonDisplayComponent {
-    @Input() collectionSize: number;
+    // @Input() collectionSize: number;
     @Input() docs:Array<DocInterface>;
 
     asJSON(anz: string = '1'): string {

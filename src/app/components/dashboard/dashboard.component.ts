@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient }        from '@angular/common/http';
+// import { Server } from 'http';
 // import { DocInterface }    from '../../services/doc.service';
 
 let service: string = 'http://127.0.0.1:3000/api/lib';   // local express REST server (SQlite3)
@@ -29,8 +30,7 @@ export class DashboardComponent implements OnInit {   // component controller
   collectionSize: number;
   loading: boolean = false;
 
-  constructor(private http: HttpClient) {  // DI of http service
-  }
+  constructor(private http: HttpClient) {} // DI of http service
     
   ngOnInit() { 
     this.loading = true;
