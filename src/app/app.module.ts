@@ -6,8 +6,9 @@ import { FormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 // import { AppRoutingModule }       from './app-routing.module';
-import { AppComponent }           from './app.component';
-import { DashboardComponent }     from './components/dashboard/dashboard.component';
+import { AppComponent } from './app.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { AsJsonDisplayComponent } from './components/asjson-display/asjson-display.component'
 // import { DocService }             from './services/doc.service';
 // import { SimpletableComponent }   from './components/simpletable/simpletable.component';
 // import { EditComponent }          from './components/edit/edit.component';
@@ -22,6 +23,7 @@ import { DashboardComponent }     from './components/dashboard/dashboard.compone
   declarations: [
     AppComponent,
     DashboardComponent,
+    AsJsonDisplayComponent,
     // EditComponent,
     // SimpletableComponent,
     // CompleteTableComponent,

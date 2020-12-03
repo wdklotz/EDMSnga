@@ -29,10 +29,6 @@ export class DashboardComponent implements OnInit {   // component controller
   collectionSize: number;
   loading: boolean = false;
 
-  asJSON(anz: string = '1'): string {
-    return JSON.stringify(this.docs.slice(0,parseInt(anz)));
-  };
-
   constructor(private http: HttpClient) {  // DI of http service
   }
     

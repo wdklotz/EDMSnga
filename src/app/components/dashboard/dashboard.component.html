@@ -1,7 +1,7 @@
 <p>dashboard works!<span *ngIf="loading"><h3>loading...</h3></span></p>
 
-<p>CollectionSize: {{ collectionSize }}</p>
-<pre>{{ asJSON() }}</pre>
+<json-display [collectionSize]=collectionSize [docs]=docs></json-display>
+
 <!-- <simpletable [docs]="docs"></simpletable> -->
 <!-- <complete-table [docs]="docs"></complete-table> -->
 <!-- <pagination 
