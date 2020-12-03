@@ -29,8 +29,8 @@ export class DashboardComponent implements OnInit {   // component controller
   collectionSize: number;
   loading: boolean = false;
 
-  asJSON(): string {
-    return JSON.stringify(this.docs);
+  asJSON(anz: string = '1'): string {
+    return JSON.stringify(this.docs.slice(0,parseInt(anz)));
   };
 
   constructor(private http: HttpClient) {  // DI of http service
@@ -38,7 +38,7 @@ export class DashboardComponent implements OnInit {   // component controller
     
   ngOnInit() { 
     this.loading = true;
-    this.http.get<Array<DocInterface>>(service).subscribe(data=> {  // observable
+    this.http.get(service).subscribe((data: Array<DocInterface>)=> {  // observable
       this.docs = data;
       this.collectionSize = data.length;
       this.loading = false;
