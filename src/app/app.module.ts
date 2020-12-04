@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
@@ -8,23 +7,21 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 // import { AppRoutingModule }       from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
-import { AsJsonDisplayComponent } from './components/asjson-display/asjson-display.component'
+import { DocInterfaceDisplayComponent } from './components/docinterface-display/docinterface-display.component'
 import { DocService } from './services/doc.service';
-// import { DocService }             from './services/doc.service';
 // import { SimpletableComponent }   from './components/simpletable/simpletable.component';
 // import { EditComponent }          from './components/edit/edit.component';
 // import { CompleteTableComponent } from './components/complete-table/complete-table.component';
 // import { PaginationComponent }    from './components/pagination/pagination.component';
 
 // NgModule? https://angular.io/api/core/NgModule
-
 // Decorator that marks class as a NgModule (supplies configuration metadata):
 @NgModule({
   // list of components, directives, and pipes (declarables) that belong to this module. 
   declarations: [
     AppComponent,
     DashboardComponent,
-    AsJsonDisplayComponent,
+    DocInterfaceDisplayComponent,
     // EditComponent,
     // SimpletableComponent,
     // CompleteTableComponent,

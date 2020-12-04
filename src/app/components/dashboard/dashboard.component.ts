@@ -12,11 +12,11 @@ export class DashboardComponent implements OnInit {   // component controller
   collectionSize: number;
   loading: boolean = false;
 
-  constructor(private docService: DocService) {} // DI of http service
+  constructor(private docService: DocService) {} // DI of DocService service
     
   ngOnInit() { 
     this.loading = true;
-    this.docService.getDocuments().subscribe((data: Array<DocInterface>) => {  // observable
+    this.docService.getDocuments().subscribe((data: Array<DocInterface>) => {  // subscribe observable
       this.docs = data;
       this.collectionSize = data.length;
       this.loading = false;
