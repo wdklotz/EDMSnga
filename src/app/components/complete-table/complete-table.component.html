@@ -1,5 +1,4 @@
-<p>complete-table works!</p>
-<p>An observable async service to fetch a list of documents</p>
+<p>complete-table works with pagination!</p>
 
 <style>
 /* spacing */
@@ -55,7 +54,7 @@ table {
   background-color: #cdcad1;
 }
 </style>
-<form>
+<!-- <form> -->
   <!-- <div class="form-group form-inline">
       Full text search: <input class="form-control ml-2" type="text" name="searchTerm" [(ngModel)]="service.searchTerm"/>
       <span class="ml-3" *ngIf="service.loading$ | async">Loading...</span>
@@ -79,7 +78,7 @@ table {
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let doc of docs">
+      <tr *ngFor="let doc of docs | slice: (page-1)*pageSize: (page-1)*pageSize+pageSize">
         <th scope="row">{{ doc.id }}</th>
         <td style="text-align: left">{{doc.Document}}</td>
         <td style="text-align: left">{{doc.Author}}</td>
@@ -92,18 +91,16 @@ table {
     </tbody>
   </table>
 
-  <!-- <div class="d-flex justify-content-between p-2">
-    <ngb-pagination
-      [collectionSize]="(total$ | async)!" [(page)]="service.page" [pageSize]="service.pageSize">
-    </ngb-pagination>
+  <div class="d-flex justify-content-between p-2">
+    <ngb-pagination [collectionSize]=docs.length [(page)]=page [pageSize]=pageSize [maxSize]=maxSize [rotate]="true" [ellipses]="false" [boundaryLinks]="true"></ngb-pagination>
 
-    <select class="custom-select" style="width: auto" name="pageSize" [(ngModel)]="service.pageSize">
+    <!-- <select class="custom-select" style="width: auto" name="pageSize" [(ngModel)]="service.pageSize">
       <option [ngValue]="2">2 items per page</option>
       <option [ngValue]="4">4 items per page</option>
       <option [ngValue]="6">6 items per page</option>
-    </select>
-  </div> -->
-</form>
+    </select> -->
+  </div>
+<!-- </form> -->
 
 <!-- <form>
   <div class="form-group form-inline">

@@ -1,4 +1,5 @@
 import {Component, Input, OnInit } from '@angular/core';
+import { DocService } from 'src/app/services/doc.service';
 import { DocInterface } from '../../models/docinterface.model';
 // import {NgbdSortableHeader, SortEvent}                     from '../../directives/sortable.directive';
 
@@ -8,23 +9,13 @@ import { DocInterface } from '../../models/docinterface.model';
   styleUrls:  ['./complete-table.component.css']
 })
 export class CompleteTableComponent implements OnInit {
-@Input() docs : Array<DocInterface>;
-
-  // @ViewChildren(NgbdSortableHeader) 
-  //   headers: QueryList<NgbdSortableHeader>;
+  @Input() docs : Array<DocInterface>;
+  page = 1;
+  pageSize = 15;
+  maxSize = 10;
 
   constructor() { }
 
-  // onSort({column, direction}: SortEvent) {
-  //   // resetting other headers
-  //   this.headers.forEach(header => {
-  //     if (header.sortable !== column) {
-  //       header.direction = '';
-  //     }
-  //   });
-  //   this.service.sortColumn = column;
-  //   this.service.sortDirection = direction;
-  // }
 ngOnInit(): void { }
 }
 
