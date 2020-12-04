@@ -1,11 +1,11 @@
 <p>dashboard works!<span *ngIf="loading"><h3>loading...</h3></span></p>
 
 <!-- Child views of dashboard component -->
-    <!-- <json-display [docs]=docs></json-display>  -->
+<!-- ================================== -->
+<!-- <json-display [docs]=docs></json-display>  -->
+<!-- <simpletable [docs]="docs"></simpletable> -->
+<complete-table [docs]="docs"></complete-table>
 
-    <simpletable [docs]="docs"></simpletable>
-
-<!-- <complete-table [docs]="docs"></complete-table> -->
 <!-- <pagination 
     [docs]="docs" 
     [collectionSize]="collectionSize">

@@ -1,5 +1,5 @@
-import {Component, Input, OnInit, QueryList, ViewChildren} from '@angular/core';
-import { DocInterface } from '../../services/doc.service';
+import {Component, Input, OnInit } from '@angular/core';
+import { DocInterface } from '../../models/docinterface.model';
 // import {NgbdSortableHeader, SortEvent}                     from '../../directives/sortable.directive';
 
 @Component({
@@ -8,8 +8,7 @@ import { DocInterface } from '../../services/doc.service';
   styleUrls:  ['./complete-table.component.css']
 })
 export class CompleteTableComponent implements OnInit {
-@Input()
-  docs : Array<DocInterface>;
+@Input() docs : Array<DocInterface>;
 
   // @ViewChildren(NgbdSortableHeader) 
   //   headers: QueryList<NgbdSortableHeader>;

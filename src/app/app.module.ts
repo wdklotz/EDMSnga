@@ -10,8 +10,8 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { DocInterfaceDisplayComponent } from './components/docinterface-display/docinterface-display.component'
 import { DocService } from './services/doc.service';
 import { SimpletableComponent } from './components/simpletable/simpletable.component';
+import { CompleteTableComponent } from './components/complete-table/complete-table.component';
 // import { EditComponent }          from './components/edit/edit.component';
-// import { CompleteTableComponent } from './components/complete-table/complete-table.component';
 // import { PaginationComponent }    from './components/pagination/pagination.component';
 
 // NgModule? https://angular.io/api/core/NgModule
@@ -22,9 +22,9 @@ import { SimpletableComponent } from './components/simpletable/simpletable.compo
     AppComponent,
     DashboardComponent,
     DocInterfaceDisplayComponent,
-    // EditComponent,
     SimpletableComponent,
-    // CompleteTableComponent,
+    CompleteTableComponent,
+    // EditComponent,
     // PaginationComponent,
   ],
   imports: [
