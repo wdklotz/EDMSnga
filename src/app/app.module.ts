@@ -9,7 +9,7 @@ import { AppComponent } from './app.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { DocInterfaceDisplayComponent } from './components/docinterface-display/docinterface-display.component'
 import { DocService } from './services/doc.service';
-// import { SimpletableComponent }   from './components/simpletable/simpletable.component';
+import { SimpletableComponent } from './components/simpletable/simpletable.component';
 // import { EditComponent }          from './components/edit/edit.component';
 // import { CompleteTableComponent } from './components/complete-table/complete-table.component';
 // import { PaginationComponent }    from './components/pagination/pagination.component';
@@ -23,7 +23,7 @@ import { DocService } from './services/doc.service';
     DashboardComponent,
     DocInterfaceDisplayComponent,
     // EditComponent,
-    // SimpletableComponent,
+    SimpletableComponent,
     // CompleteTableComponent,
     // PaginationComponent,
   ],
