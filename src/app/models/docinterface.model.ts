@@ -12,3 +12,16 @@ export interface DocInterface {
   Shelf    : string,
   select?  : boolean,
 }
+
+export interface SearchResult {
+  documents: Array<DocInterface>;
+  total: number;
+}
+
+export interface State {
+  // page: number;
+  // pageSize: number;
+  searchTerm: string;
+  // sortColumn: SortColumn;
+  // sortDirection: SortDirection;
+}

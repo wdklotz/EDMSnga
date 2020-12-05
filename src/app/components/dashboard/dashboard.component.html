@@ -1,12 +1,14 @@
-<p>dashboard works!<span *ngIf="loading"><h3>loading...</h3></span></p>
-
+<!-- <p>dashboard works!<span *ngIf="loading"><h3>loading...</h3></span></p> -->
+<!-- <p>{{searchTerm}}</p> -->
 <!-- Child views of dashboard component -->
 <!-- ================================== -->
 <!-- <json-display [docs]=docs></json-display>  -->
 <!-- <simpletable [docs]="docs"></simpletable> -->
-<complete-table [docs]="docs"></complete-table>
+<form (submit)="fullTextSearch()">
+  <div class="form-group form-inline">
+    Search: <input class="form-control ml-2" type="text" name="searchTerm" [(ngModel)]="searchTerm"/><span *ngIf="loading"><h3>&nbsp;loading...</h3></span>
 
-<!-- <pagination 
-    [docs]="docs" 
-    [collectionSize]="collectionSize">
-</pagination> -->
+  </div>
+</form>
+
+  <complete-table [docs]="docs"></complete-table>
