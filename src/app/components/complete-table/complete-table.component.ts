@@ -1,8 +1,6 @@
 import {Component, Input, OnInit } from '@angular/core';
-import { DocService } from 'src/app/services/doc.service';
 import { DocInterface } from '../../models/docinterface.model';
 import { ConfigService } from '../../services//config.service';
-// import {NgbdSortableHeader, SortEvent}                     from '../../directives/sortable.directive';
 
 @Component({
   selector:    'complete-table',
