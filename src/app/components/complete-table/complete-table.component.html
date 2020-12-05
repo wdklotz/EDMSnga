@@ -9,13 +9,13 @@ table {
   border: 3px solid purple;
 }
 thead th:nth-child(1) {
-  width: 5%;
+  width: 2%;
 }
 thead th:nth-child(2) {
-  width: 38%;
+  width: 4%;
 }
 thead th:nth-child(3) {
-  width: 10%;
+  width: 37%;
 }
 thead th:nth-child(4) {
   width: 10%;
@@ -24,12 +24,15 @@ thead th:nth-child(5) {
   width: 10%;
 }
 thead th:nth-child(6) {
-  width: 17%;
+  width: 10%;
 }
 thead th:nth-child(7) {
-  width: 5%;
+  width: 17%;
 }
 thead th:nth-child(8) {
+  width: 5%;
+}
+thead th:nth-child(9) {
   width: 5%;
 }
 th, td {
@@ -64,6 +67,7 @@ table {
       <caption><span style="font-size:1.5em"><u>E</u>lectronic <u>D</u>ocument <u>M</u>anagement <u>S</u>ystem - Content/Library</span><span style="float: right">powered by Angular</span></caption>      
     <thead class="thead-dark">
       <tr>
+        <th scope="col"><input type="checkbox"/></th>
         <th scope="col">Id</th>
         <th scope="col" style="text-align: left">File</th>
         <th scope="col" style="text-align: left">Author</th>
@@ -79,7 +83,8 @@ table {
     </thead>
     <tbody>
       <tr *ngFor="let doc of docs | slice: (page-1)*pageSize: (page-1)*pageSize+pageSize">
-        <th scope="row"><a href="{{statics}}{{doc.Document}}">{{ doc.id }}</a></th>
+        <td><input type="checkbox"/></td>
+        <th><a href="{{statics}}{{doc.Document}}">{{ doc.id }}</a></th>
         <td style="text-align: left">{{doc.Document}}</td>
         <td style="text-align: left">{{doc.Author}}</td>
         <td style="text-align: left">{{doc.Type}}</td>
