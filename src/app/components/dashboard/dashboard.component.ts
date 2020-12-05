@@ -24,9 +24,7 @@ export class DashboardComponent implements OnInit {   // component controller
   loadFromDb() {
     this.loading = true;
     this.docService.getDocuments().subscribe((data: Array<DocInterface>) => {  // subscribe observable
-      // this.docs = data.filter(element => matches(element, searchTerm));
       this.docs = data.filter(element => matches(element, this.searchTerm));
-      // this.docs = data;
       this.collectionSize = this.docs.length;
       this.loading = false;
     });
