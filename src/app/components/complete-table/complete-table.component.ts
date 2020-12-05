@@ -1,6 +1,7 @@
 import {Component, Input, OnInit } from '@angular/core';
 import { DocService } from 'src/app/services/doc.service';
 import { DocInterface } from '../../models/docinterface.model';
+import { ConfigService } from '../../services//config.service';
 // import {NgbdSortableHeader, SortEvent}                     from '../../directives/sortable.directive';
 
 @Component({
@@ -13,6 +14,7 @@ export class CompleteTableComponent implements OnInit {
   page = 1;
   pageSize = 15;
   maxSize = 10;
+  statics = ConfigService.get('statics');
 
   constructor() { }
 

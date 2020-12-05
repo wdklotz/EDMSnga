@@ -79,7 +79,7 @@ table {
     </thead>
     <tbody>
       <tr *ngFor="let doc of docs | slice: (page-1)*pageSize: (page-1)*pageSize+pageSize">
-        <th scope="row">{{ doc.id }}</th>
+        <th scope="row"><a href="{{statics}}{{doc.Document}}">{{ doc.id }}</a></th>
         <td style="text-align: left">{{doc.Document}}</td>
         <td style="text-align: left">{{doc.Author}}</td>
         <td style="text-align: left">{{doc.Type}}</td>

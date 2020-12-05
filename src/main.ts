@@ -10,6 +10,7 @@ if (environment.production) {
 }
 
 ConfigService.set('api', 'http://127.0.0.1:3000/api/lib');
+ConfigService.set('statics', 'http://localhost:3000/data/');
 
 platformBrowserDynamic().bootstrapModule(AppModule)
   .catch(err => console.error(err));
