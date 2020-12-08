@@ -1,0 +1,57 @@
+/* <style> */
+/* spacing */
+table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  border: 3px solid purple;
+}
+thead th:nth-child(1) {
+  width: 2%;
+}
+thead th:nth-child(2) {
+  width: 4%;
+}
+thead th:nth-child(3) {
+  width: 37%;
+}
+thead th:nth-child(4) {
+  width: 10%;
+}
+thead th:nth-child(5) {
+  width: 10%;
+}
+thead th:nth-child(6) {
+  width: 10%;
+}
+thead th:nth-child(7) {
+  width: 17%;
+}
+thead th:nth-child(8) {
+  width: 5%;
+}
+thead th:nth-child(9) {
+  width: 5%;
+}
+th, td {
+  padding: 5px;
+}
+
+/* zebra striping */
+
+tbody tr:nth-child(odd) {
+  background-color: #30cae6;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #2aaec5;
+}
+
+/* tbody tr {
+  background-image: url(noise.png);
+} */
+
+table {
+  background-color: #cdcad1;
+}
+/* </style> */
