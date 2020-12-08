@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { DocInterface } from '../../models/docinterface.model';
+import { DocInterface } from '../../models/interfaces';
 
 // A component with inline template to display Array<DocInterface>
 @Component({

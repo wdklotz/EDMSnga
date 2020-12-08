@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DocInterface } from '../../models/docinterface.model';
+import { DocInterface } from '../../models/interfaces';
 import { DocService } from '../../services/doc.service';
 
 function matches(doc: DocInterface, term: string) {
