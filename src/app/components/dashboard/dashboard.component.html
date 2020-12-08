@@ -4,11 +4,14 @@
 <!-- ================================== -->
 <!-- <json-display [docs]=docs></json-display>  -->
 <!-- <simpletable [docs]="docs"></simpletable> -->
+
+<!-- <SEARCH form> element-->
 <form (submit)="fullTextSearch()">
   <div class="form-group form-inline">
-    Search: <input class="form-control ml-2" type="text" name="searchTerm" [(ngModel)]="searchTerm"/><span *ngIf="loading"><h3>&nbsp;loading...</h3></span>
-
+    Search: <input class="form-control ml-2" type="text" name="searchTerm" [(ngModel)]="searchTerm"/>
+    <span *ngIf="loading"><h3>&nbsp;loading...</h3></span>
   </div>
 </form>
 
-  <complete-table [docs]="docs"></complete-table>
+<!-- <COMPLETE-TABLE> component -->
+<complete-table [docs]="docs"></complete-table>

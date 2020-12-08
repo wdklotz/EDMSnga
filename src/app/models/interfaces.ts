@@ -13,6 +13,7 @@ export interface DocInterface {
   select?  : boolean,
 }
 
+// TBD
 // export interface SearchResult {
 //   documents: Array<DocInterface>;
 //   total: number;
