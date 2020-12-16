@@ -1,8 +1,17 @@
-<!-- <div class="mdl-grid"> -->
-<!-- <h5>Stocks dashboard: </h5> -->
-    <!-- <div class="mdl-cell mdl-cell--12-col" *ngIf="!stocks" style="text-align:center;">Loading</div> -->
-    <!-- <div class="mdl-cell mdl-cell--6-col" *ngFor="let doc of docs">
-       <summary [document]="doc"></summary>
-    </div> -->
-<!-- </div> -->
-<simpletable [docs]="docs"></simpletable>
+<!-- <p>dashboard works!<span *ngIf="loading"><h3>loading...</h3></span></p> -->
+<!-- <p>{{searchTerm}}</p> -->
+<!-- Child views of dashboard component -->
+<!-- ================================== -->
+<!-- <json-display [docs]=docs></json-display>  -->
+<!-- <simpletable [docs]="docs"></simpletable> -->
+
+<!-- <SEARCH form> element-->
+<form (submit)="fullTextSearch()">
+  <div class="form-group form-inline">
+    Search: <input class="form-control ml-2" type="text" name="searchTerm" [(ngModel)]="searchTerm"/>
+    <span *ngIf="loading"><h3>&nbsp;loading...</h3></span>
+  </div>
+</form>
+
+<!-- <COMPLETE-TABLE> component -->
+<complete-table [docs]="docs"></complete-table>

@@ -1,20 +1,40 @@
-import { Component, OnInit }           from '@angular/core';
-import { StocksService, DocInterface } from '../../services/stocks.service';
+import { Component, OnInit } from '@angular/core';
+import { DocInterface } from '../../models/interfaces';
+import { DocService } from '../../services/doc.service';
+
+function matches(doc: DocInterface, term: string) {
+  if (term == "" || term == undefined) return true;
+  let lterm = term.toLowerCase();
+  return doc.Document.toLowerCase().includes(lterm) || doc.Author.toLowerCase().includes(lterm) || doc.Type.toLowerCase().includes(lterm) || doc.Shelf.toLowerCase().includes(lterm)
+}
 
 @Component({
   selector:    'dashboard',
   templateUrl: './dashboard.component.html',
-  styleUrls:  ['./dashboard.component.css']
+  styleUrls:  ['./dashboard.component.css'],
 })
-export class DashboardComponent implements OnInit {
-  docs: Array<DocInterface>;      // props
+export class DashboardComponent implements OnInit {   // component controller
+  docs: Array<DocInterface>;                          // component property
+  collectionSize: number;
+  loading: boolean = false;
+  searchTerm: string = '';
+  
+  constructor(private docService: DocService) {  } // DI of DocService service
 
-  constructor(private service: StocksService) {
-    // this.symbols = service.get();
-    }
+  loadFromDb() {
+    this.loading = true;
+    this.docService.getDocuments().subscribe((data: Array<DocInterface>) => {  // subscribe observable
+      this.docs = data.filter(element => matches(element, this.searchTerm));
+      this.collectionSize = this.docs.length;
+      this.loading = false;
+    });
+  }
+    
+  fullTextSearch() {
+    this.loadFromDb();
+  }
 
-  ngOnInit() {
-    // this.service.load(this.symbols).subscribe(stocks => this.stocks = stocks);  // observable
-    this.service.get().subscribe(doc => this.docs = doc);  // observable
+  ngOnInit() { 
+    this.loadFromDb();
   }
 }

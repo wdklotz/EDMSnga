@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { DocInterface }             from '../../services/stocks.service';
+import { DocInterface } from '../../models/interfaces';
 
 
 @Component({
@@ -8,8 +8,7 @@ import { DocInterface }             from '../../services/stocks.service';
   styleUrls:  ['./simpletable.component.css']
 })
 export class SimpletableComponent implements OnInit {
-  @Input() 
-    docs: Array<DocInterface>;        // component property
+  @Input() docs: Array<DocInterface>;        // component property
 
   constructor() { }
   ngOnInit(): void {}

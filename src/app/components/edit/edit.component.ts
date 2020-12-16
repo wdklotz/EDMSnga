@@ -1,5 +1,5 @@
 import { Component }     from '@angular/core';
-import { StocksService } from '../../services/stocks.service';
+import { DocService }    from '../../services/doc.service';
 
 @Component({
   selector: 'edit',
@@ -7,10 +7,10 @@ import { StocksService } from '../../services/stocks.service';
   styleUrls: ['./edit.component.css']
 })
 export class EditComponent {
-  symbols: Array<string>;
-  stock: string;
+  // symbols: Array<string>;
+  // stock: string;
 
-  constructor(private service: StocksService) {
+  constructor(private service: DocService) {
     // this.symbols = service.get();
   }
   add() {

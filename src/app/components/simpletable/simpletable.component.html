@@ -1,27 +1,29 @@
 <p>simpletable works!</p>
-<table class="mdl-data-table mdl-js-data-table">
-    <thead>
-        <tr>
-            <th>Id</th>
-            <th class="mdl-data-table__cell--non-numeric">File</th>
-            <th class="mdl-data-table__cell--non-numeric">Author</th>
-            <th class="mdl-data-table__cell--non-numeric">Type</th>
-            <th class="mdl-data-table__cell--non-numeric">Shelf</th>
-            <th class="mdl-data-table__cell--non-numeric">Keywords</th>
-            <th class="mdl-data-table__cell--non-numeric">Favorite</th>
-            <th class="mdl-data-table__cell--non-numeric">Trash</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let doc of docs">
-            <td>{{doc.id}}</td>
-            <td class="mdl-data-table__cell--non-numeric">{{doc.Document}}</td>    
-            <td class="mdl-data-table__cell--non-numeric">{{doc.Author}}</td>    
-            <td class="mdl-data-table__cell--non-numeric">{{doc.Type}}</td>    
-            <td class="mdl-data-table__cell--non-numeric">{{doc.Shelf}}</td>    
-            <td class="mdl-data-table__cell--non-numeric">{{doc.Keywords}}</td>    
-            <td class="mdl-data-table__cell--non-numeric">{{doc.Favorite}}</td>    
-            <td class="mdl-data-table__cell--non-numeric">{{doc.Trash}}</td>    
-        </tr>    
-    </tbody>
-</table>
+<section id="my-table">
+    <table class="mdl-data-table mdl-js-data-table">
+        <thead>
+            <tr>
+                <th style="width: 8em">Id</th>
+                <th class="mdl-data-table__cell--non-numeric" style="width: 26em">File</th>
+                <th class="mdl-data-table__cell--non-numeric" style="width: 12em">Author</th>
+                <th class="mdl-data-table__cell--non-numeric" style="width: 12em">Type</th>
+                <th class="mdl-data-table__cell--non-numeric" style="width: 12em">Shelf</th>
+                <th class="mdl-data-table__cell--non-numeric">Keywords</th>
+                <th style="width: 6em">Fav</th>
+                <th style="width: 6em">Trs</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let doc of docs">
+            <tr>
+                <td>{{doc.id}}</td>
+                <td>{{doc.Document}}</td>    
+                <td>{{doc.Author}}</td>    
+                <td>{{doc.Type}}</td>    
+                <td>{{doc.Shelf}}</td>    
+                <td>{{doc.Keywords}}</td>    
+                <td>{{doc.Favorite}}</td>    
+                <td>{{doc.Trash}}</td>    
+            </tr>
+        </tbody>
+    </table>
+</section>
